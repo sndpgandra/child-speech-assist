@@ -1,6 +1,11 @@
 import { Word } from './types';
 
 export const SEED_WORDS: Word[] = [
+    // Early Sounds
+    { id: 'baa', text: 'Baa', categoryId: 'early-sounds', imageUrl: '/images/words/baa.svg', videoUrl: '/images/mouths/baa_mouth.svg', status: 'new', difficultyLevel: 1, ageOfAcquisition: 6 },
+    { id: 'pop', text: 'Pop', categoryId: 'early-sounds', imageUrl: '/images/words/pop.svg', videoUrl: '/images/mouths/pop_mouth.svg', status: 'new', difficultyLevel: 1, ageOfAcquisition: 8 },
+    { id: 'peas', text: 'Peas', categoryId: 'early-sounds', imageUrl: '/images/words/peas.svg', videoUrl: '/images/mouths/peas_mouth.svg', status: 'new', difficultyLevel: 1, ageOfAcquisition: 10 },
+
     // Animals
     { id: 'dog', text: 'Dog', categoryId: 'animals', imageUrl: '/images/words/dog.png', status: 'new' },
     { id: 'cat', text: 'Cat', categoryId: 'animals', imageUrl: '/images/words/cat.png', status: 'new' },

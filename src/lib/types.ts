@@ -7,6 +7,8 @@ export interface Word {
     imageUrl: string;
     videoUrl?: string; // Optional for now
     status: ProgressStatus;
+    difficultyLevel?: number; // 1-5 scale
+    ageOfAcquisition?: number; // in months
 }
 
 export interface Category {
@@ -17,6 +19,7 @@ export interface Category {
 }
 
 export const CATEGORIES: Category[] = [
+    { id: 'early-sounds', name: 'Early Sounds', icon: 'Music', color: 'bg-purple-100' },
     { id: 'animals', name: 'Animals', icon: 'Dog', color: 'bg-orange-100' },
     { id: 'food', name: 'Food', icon: 'Apple', color: 'bg-green-100' },
     { id: 'family', name: 'Family', icon: 'Users', color: 'bg-blue-100' },
