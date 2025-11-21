@@ -202,8 +202,8 @@ export default function PracticeSession({ words, onComplete }: PracticeSessionPr
                             <Button
                                 size="lg"
                                 className={`rounded-full w-24 h-24 shadow-xl transition-all transform hover:scale-105 ${isListening
-                                        ? 'bg-red-500 hover:bg-red-600 animate-pulse'
-                                        : 'bg-blue-500 hover:bg-blue-600'
+                                    ? 'bg-red-500 hover:bg-red-600 animate-pulse'
+                                    : 'bg-blue-500 hover:bg-blue-600'
                                     }`}
                                 onClick={isListening ? stopListening : startListening}
                             >
@@ -264,12 +264,12 @@ export default function PracticeSession({ words, onComplete }: PracticeSessionPr
                         </div>
                     </div>
                 }
+                bearOverlay={
+                    <div className="absolute bottom-32 left-0 right-0 w-full flex justify-center">
+                        <Assistant state={bearState} position={bearPosition} />
+                    </div>
+                }
             />
-
-            {/* Bear positioned absolutely over entire book */}
-            <div className="absolute bottom-32 left-0 right-0 pointer-events-none z-40">
-                <Assistant state={bearState} position={bearPosition} />
-            </div>
         </div>
     );
 }

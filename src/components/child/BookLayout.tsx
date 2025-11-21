@@ -1,9 +1,10 @@
 interface BookLayoutProps {
     leftContent: React.ReactNode;
     rightContent: React.ReactNode;
+    bearOverlay?: React.ReactNode; // Optional bear that moves across pages
 }
 
-export function BookLayout({ leftContent, rightContent }: BookLayoutProps) {
+export function BookLayout({ leftContent, rightContent, bearOverlay }: BookLayoutProps) {
     return (
         <div className="min-h-screen bg-wood-pattern flex items-center justify-center p-4 md:p-8 bg-[#f0e6d2]">
             <div className="relative w-full max-w-6xl aspect-[3/2] bg-white rounded-3xl shadow-2xl flex overflow-hidden border-8 border-[#8d6e63]">
@@ -21,6 +22,13 @@ export function BookLayout({ leftContent, rightContent }: BookLayoutProps) {
                     <div className="absolute inset-0 bg-gradient-to-l from-transparent to-black/5 pointer-events-none" />
                     {rightContent}
                 </div>
+
+                {/* Bear Overlay - positioned absolutely over entire book */}
+                {bearOverlay && (
+                    <div className="absolute inset-0 pointer-events-none z-20">
+                        {bearOverlay}
+                    </div>
+                )}
             </div>
         </div>
     );

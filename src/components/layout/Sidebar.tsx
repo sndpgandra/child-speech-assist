@@ -8,11 +8,13 @@ import {
     BookOpen,
     Settings,
     LogOut,
-    Sparkles
+    Sparkles,
+    Star
 } from "lucide-react";
 
 const sidebarItems = [
     { icon: LayoutDashboard, label: "Dashboard", href: "/parent" },
+    { icon: Star, label: "Recommended Words", href: "/parent/recommended" },
     { icon: BookOpen, label: "Manage Words", href: "/parent/words" },
     { icon: BookOpen, label: "Wordbank Viewer", href: "/parent/wordbank" },
     { icon: Settings, label: "Settings", href: "/parent/settings" },
